@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+.about_eNotes{
+  background: url(assests/eNotes.png);
+  background-repeat:no-repeat;
+  margin-top: 3.5rem !important;
+  width: 100%;
+  height: 45em;
+}
+
+.ml {
+  margin-left: 3rem;
+}
+
+.specWid {
+  width: 50%;
+}
+
+.specForm {
+  width: 60%;
+}
+
+.login {
+  background: url(assests/login.png);
+  background-repeat:no-repeat;
+  height: 35em;
+  width: 46em;
+  border-radius: 1.0rem;
+}
+
+.flexDirection {
+  flex-direction: row;
+}
+
+.card-split{
+  width: 70%;
+  word-break: break-all;
+}
+
+/* MOBILE */
+@media screen and (max-width:767px){
+  .card-split{
+    width: 80%;
+  }
+
+  .flexDirection {
+    flex-direction: column;
+  }
+
+  .login {
+    background: unset;
+  }
+
+  .ml {
+    margin-left: 1rem;
+  }
+
+  .specWid {
+    width: 100%;
+  }
+
+  .specForm {
+    width: 90%;
+  }
+}
+
+/* IPAD  */
+@media screen and (max-width:1023px) and (min-width:768px){
+  .card-split {
+    width: 50%;
+  }
+
+  .flexDirection {
+    flex-direction: column;
+  }
+
+  .specWid {
+    width: 65%;
+  }
+
+  .specForm {
+    width: 100%;
+  }
+}
+
+/* IPAD PRO */
+@media screen and (max-width:1366px) and (min-width:1024px){
+  .card-split {
+    width: 65%;
+  }
+
+  .about_eNotes {
+    width: 76%;
+  }
+
+  .specForm {
+    width: 75%;
+  }
+}
