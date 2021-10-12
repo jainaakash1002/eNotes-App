@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 export const Signup = (props) => {
 
@@ -38,30 +38,45 @@ export const Signup = (props) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
 
+    const checkView = () => {
+        if (window.innerWidth <= 767) {
+            return true;
+        }
+        return false;
+    }
+
     return (
-        <div className="container mt-3">
-            <h2>Create Account</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3 mt-3">
-                    <label htmlFor="name">Name</label>
-                    <input type="name" className="form-control bg-light" id="name" name="name" placeholder="Enter name here*" onChange={onChange} />
+        <>
+            <div className="d-flex createUser">
+                {!checkView() && <div className="width">
+                    <img className="signup" />
+                </div>}
+                <div className="container mt-3">
+                    <h1 style={{"font-family": "-webkit-body"}}>Create Account</h1>
+                    <h5 style={{"font-family": "cursive"}}>To use eNotes App, you needs to signup and can freely use the app.</h5>
+                    <form onSubmit={handleSubmit}>
+                        <div className="mb-3 mt-4">
+                            <label htmlFor="name">Name</label>
+                            <input type="name" className="form-control bg-light form-width" id="name" name="name" placeholder="Enter name here*" onChange={onChange} />
+                        </div>
+                        <div className="mb-3 mt-4">
+                            <label htmlFor="email">Email Address</label>
+                            <input type="email" className="form-control bg-light form-width" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email address here*" onChange={onChange} />
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div className="mb-3 mt-4">
+                            <label htmlFor="password">Password</label>
+                            <input type="password" className="form-control bg-light form-width" id="password" name="password" placeholder="Your password here*" onChange={onChange} minLength={5} required />
+                        </div>
+                        <div className="mb-3 mt-4">
+                            <label htmlFor="cpassword">Confirm Password</label>
+                            <input type="password" className="form-control bg-light form-width" id="cpassword" name="cpassword" placeholder="Rewrite the same password here*" onChange={onChange} minLength={5} required />
+                        </div>
+                        <button type="submit" className="btn btn-primary mt-3">Submit Credentials</button>
+                    </form>
                 </div>
-                <div className="mb-3 mt-3">
-                    <label htmlFor="email">Email Address</label>
-                    <input type="email" className="form-control bg-light" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email address here*" onChange={onChange} />
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div className="mb-3 mt-3">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" className="form-control bg-light" id="password" name="password" placeholder="Your password here*" onChange={onChange} minLength={5} required/>
-                </div>
-                <div className="mb-3 mt-3">
-                    <label htmlFor="cpassword">Confirm Password</label>
-                    <input type="password" className="form-control bg-light" id="cpassword" name="cpassword" placeholder="Rewrite the same password here*" onChange={onChange} minLength={5} required/>
-                </div>
-                <button type="submit" className="btn btn-primary mt-3">Submit Credentials</button>
-            </form>
-        </div>
+            </div>
+        </ >
     )
 }
 export default Signup

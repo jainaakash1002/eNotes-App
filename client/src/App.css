@@ -2,23 +2,44 @@
   box-sizing: border-box;
 }
 
-.about_eNotes{
-  background: url(assests/eNotes.png);
+.enotes {
+  background: url(assests/enotes.png);
   background-repeat:no-repeat;
-  margin-top: 3.5rem !important;
-  width: 100%;
-  height: 45em;
+  width: 70%;
+  height: 46em;
+}
+
+.footer {
+  position: fixed;
+  left: 4rem;
+  bottom: 0;
+  text-align: center;
+}
+
+.about {
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.aboutus {
+  margin-left: 3rem;
+  margin-top: 5rem;
+}
+
+.card-split {
+  width: 70%;
+  word-break: break-all;
 }
 
 .ml {
   margin-left: 3rem;
 }
 
-.specWid {
+.width {
   width: 50%;
 }
 
-.specForm {
+.form-width {
   width: 60%;
 }
 
@@ -30,22 +51,30 @@
   border-radius: 1.0rem;
 }
 
-.flexDirection {
+.signup {
+  background-image: url(assests/signup.png);
+  background-repeat:no-repeat;
+  width: 18.4em;
+  height: 33.8em;
+  border-radius: 1.0rem;
+}
+
+.flex-Direction {
   flex-direction: row;
 }
 
-.card-split{
-  width: 70%;
-  word-break: break-all;
+.createUser > div {
+  flex-direction: row;
+  margin-left: 3rem;
 }
 
 /* MOBILE */
 @media screen and (max-width:767px){
-  .card-split{
+  .card-split {
     width: 80%;
   }
 
-  .flexDirection {
+  .flex-Direction {
     flex-direction: column;
   }
 
@@ -57,13 +86,27 @@
     margin-left: 1rem;
   }
 
-  .specWid {
+  .width {
     width: 100%;
   }
 
-  .specForm {
+  .form-width {
     width: 90%;
   }
+
+  .createUser > div {
+    margin-left: 1rem;
+  }
+
+  .footer {
+    left: 0rem;
+  }
+
+  .aboutus {
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+
 }
 
 /* IPAD  */
@@ -72,16 +115,29 @@
     width: 50%;
   }
 
-  .flexDirection {
+  .flex-Direction {
     flex-direction: column;
   }
 
-  .specWid {
+  .width {
     width: 65%;
   }
 
-  .specForm {
+  .form-width {
     width: 100%;
+  }
+
+  .createUser > div {
+    margin-left: 1rem;
+  }
+
+  .about {
+    align-items: center;
+    margin-top: 0rem;
+  }
+
+  .aboutus {
+    margin-left: 8rem;
   }
 }
 
@@ -95,7 +151,19 @@
     width: 76%;
   }
 
-  .specForm {
+  .form-width {
     width: 75%;
+  }
+
+  .footer {
+    left: 11rem;
+  }
+
+  .about {
+    align-items: center;
+  }
+  
+  .aboutus {
+    margin-top: 0rem;
   }
 }
