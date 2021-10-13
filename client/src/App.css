@@ -2,13 +2,6 @@
   box-sizing: border-box;
 }
 
-.enotes {
-  background: url(assests/enotes.png);
-  background-repeat:no-repeat;
-  width: 70%;
-  height: 46em;
-}
-
 .footer {
   position: fixed;
   left: 4rem;
@@ -44,16 +37,12 @@
 }
 
 .login {
-  background: url(assests/login.png);
-  background-repeat:no-repeat;
   height: 35em;
   width: 46em;
   border-radius: 1.0rem;
 }
 
 .signup {
-  background-image: url(assests/signup.png);
-  background-repeat:no-repeat;
   width: 18.4em;
   height: 33.8em;
   border-radius: 1.0rem;

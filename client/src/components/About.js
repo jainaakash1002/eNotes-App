@@ -15,7 +15,7 @@ const About = () => {
                     </h6>
                 </div>
                 <div className="width">
-                    <img src={enotes} />
+                    <img src={enotes} alt="aboutus" />
                 </div>
             </div>
         </ >

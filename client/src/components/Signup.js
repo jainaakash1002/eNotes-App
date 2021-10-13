@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import signup from "../assests/signup.png";
 
 export const Signup = (props) => {
 
@@ -49,7 +50,7 @@ export const Signup = (props) => {
         <>
             <div className="d-flex createUser">
                 {!checkView() && <div className="width">
-                    <img className="signup" />
+                    <img src={signup} className="signup" alt="signup" />
                 </div>}
                 <div className="container mt-3">
                     <h1 style={{"font-family": "-webkit-body"}}>Create Account</h1>

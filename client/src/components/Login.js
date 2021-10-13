@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import login from "../assests/login.png";
 
 const Login = (props) => {
     const [credentials, setCredentials] = useState({ email: "", password: "" })
@@ -61,7 +62,7 @@ const Login = (props) => {
                     </form>
                 </div>
                 {!checkView() && <div className="width">
-                    <img className="login" />
+                    <img src={login} className="login" alt="login" />
                 </div>}
             </div>
         </ >
