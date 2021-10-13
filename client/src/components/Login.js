@@ -55,7 +55,7 @@ const Login = (props) => {
                             <label htmlFor="password" className="form-label mt-3">Password</label>
                             <input type="password" className="form-control bg-light form-width" value={credentials.password} placeholder="Enter password here*" onChange={onChange} name="password" id="password" />
                         </div>
-                        <div className="mb-3 mt-3">
+                        <div className="mb-3 mt-4">
                             <button type="submit" className="btn btn-primary">LogIn</button>
                         </div>
                     </form>

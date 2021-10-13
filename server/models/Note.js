@@ -1,27 +1,31 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const autoIncrement = require('mongoose-auto-increment');
 
 const NotesSchema = new Schema({
-    user:{
-        type: mongoose.Schema.Types.ObjectId,
+    user: {
+        type: String,
         ref: 'user'
     },
-    title:{
+    title: {
         type: String,
         required: true
     },
-    description:{
+    description: {
         type: String,
-        required: true, 
+        required: true,
     },
-    tag:{
+    tag: {
         type: String,
         default: "General"
     },
-    date:{
+    date: {
         type: Date,
         default: Date.now
     },
-  });
+});
 
-  module.exports = mongoose.model('notes', NotesSchema);
+
+autoIncrement.initialize(mongoose.connection);
+NotesSchema.plugin(autoIncrement.plugin, 'notes');
+module.exports = mongoose.model('notes', NotesSchema);
