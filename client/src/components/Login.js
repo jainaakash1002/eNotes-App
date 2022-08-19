@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import login from "../assests/login.png";
 import { useHistory } from 'react-router-dom'
 
 const Login = (props) => {
@@ -7,7 +8,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("https://enotes-app.herokuapp.com/api/auth/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -61,7 +62,7 @@ const Login = (props) => {
                     </form>
                 </div>
                 {!checkView() && <div className="width">
-                    <img className="login" />
+                    <img src={login} className="login" alt="login" />
                 </div>}
             </div>
         </ >
