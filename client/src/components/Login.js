@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import login from ".src/assests/login.png";
+import login from "../assets/login.png";
 import { useHistory } from 'react-router-dom'
 
 const Login = (props) => {
