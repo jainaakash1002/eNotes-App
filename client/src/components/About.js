@@ -1,5 +1,5 @@
 import React from 'react'
-import enotes from "../assests/enotes.png";
+import enotes from ".src/assests/enotes.png";
 import { AiFillGithub, AiFillHeart } from 'react-icons/ai';
 
 const About = () => {

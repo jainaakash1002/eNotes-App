@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import signup from "../assests/signup.png";
+import signup from ".src/assests/signup.png";
 
 export const Signup = (props) => {
 
